@@ -34,5 +34,29 @@
     "name": "ActiveCampaign",
     "base_category": "Marketing Automation & Lightweight CRM",
     "affiliate_url": "https://activecampaign.com/?ref=crmintelligencelab_live"
+  },
+  {
+    "id": "monday",
+    "name": "Monday Sales CRM",
+    "base_category": "Visual Work OS & Highly Flexible Pipeline CRM",
+    "affiliate_url": "https://monday.com/?ref=crmintelligencelab_live"
+  },
+  {
+    "id": "freshsales",
+    "name": "Freshsales",
+    "base_category": "AI-Driven Lightweight Enterprise CRM",
+    "affiliate_url": "https://freshworks.com/?ref=crmintelligencelab_live"
+  },
+  {
+    "id": "keap",
+    "name": "Keap",
+    "base_category": "Complex Automation & E-commerce CRM",
+    "affiliate_url": "https://keap.com/?ref=crmintelligencelab_live"
+  },
+  {
+    "id": "gohighlevel",
+    "name": "GoHighLevel",
+    "base_category": "Agency White-Label CRM & Marketing Engine",
+    "affiliate_url": "https://gohighlevel.com/?ref=crmintelligencelab_live"
   }
 ]

@@ -20,7 +20,7 @@ MODEL_NAME = "llama-3.3-70b-versatile"
 # Cesty k souborům
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_FILE = os.path.join(BASE_DIR, "../data/crms.json")
-OUTPUT_AUDITS = os.path.join(BASE_DIR, "../data/enriched_audits.json")
+OUTPUT_AUDITS = os.path.join(BASE_DIR, "../data/enriched_crms.json")
 OUTPUT_COMPARE = os.path.join(BASE_DIR, "../data/enriched_comparisons.json")
 OUTPUT_USECASES = os.path.join(BASE_DIR, "../data/enriched_usecases.json")
 

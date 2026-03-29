@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  schema?: string; // Přidána volitelná prop pro JSON-LD
+}
+
+const { 
+  title, 
+  description = "CRM Intelligence Lab - Technical Architecture Reviews & Live Audits",
+  schema
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0f172a" />
+    <title>{title}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    {schema && <script type="application/ld+json" set:html={schema} />}
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased min-h-screen selection:bg-indigo-500/30 selection:text-indigo-900">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    html {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    
+    /* Zajištění, že všechny monospaced elementy použijí JetBrains */
+    code, kbd, samp, pre, .font-mono {
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    }
+  }
+</style>

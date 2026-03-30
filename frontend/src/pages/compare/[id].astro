@@ -1,0 +1,73 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const dataPath = path.resolve(process.cwd(), '../data/enriched_comparisons.json');
+  const rawData = fs.readFileSync(dataPath, 'utf-8');
+  const comparisons = JSON.parse(rawData);
+
+  return comparisons.map((comp) => ({
+    params: { id: comp.id },
+    props: { comp },
+  }));
+}
+
+const { comp } = Astro.props;
+
+// Získáme jména z nadpisu (např. "Pipedrive vs HubSpot Architecture Comparison")
+const [crmA, crmB] = comp.title.replace(' Architecture Comparison', '').split(' vs ');
+---
+
+<Layout title={`${comp.title} | CRM Intelligence Lab`} description={comp.verdict_summary}>
+  <div class="min-h-screen bg-slate-50 font-sans text-slate-900 pb-32">
+    
+    <header class="bg-slate-950 text-white pt-24 pb-20 px-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+      <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono uppercase tracking-widest mb-6">
+          Architecture Duel
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 flex flex-col md:flex-row items-center justify-center gap-4">
+          <span class="text-white">{crmA}</span>
+          <span class="text-slate-600 text-3xl font-light italic">vs</span>
+          <span class="text-white">{crmB}</span>
+        </h1>
+        <p class="text-xl text-slate-400 font-light max-w-2xl mx-auto leading-relaxed">
+          {comp.verdict_summary}
+        </p>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 -mt-10 relative z-20">
+      
+      <div class="bg-white rounded-2xl shadow-xl shadow-indigo-100/50 border border-indigo-100 p-8 md:p-12 mb-8">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center border border-emerald-200">
+            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <div>
+            <h2 class="text-sm font-mono font-bold text-slate-400 uppercase tracking-widest">Lowest Friction Winner</h2>
+            <p class="text-3xl font-black text-slate-900 tracking-tight">{comp.friction_winner_name}</p>
+          </div>
+        </div>
+        
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-100 mb-8">
+          <h3 class="text-xs font-bold font-mono uppercase tracking-widest text-slate-500 mb-3">Technical Debt Analysis</h3>
+          <p class="text-slate-700 leading-relaxed">
+            {comp.technical_debt_comparison}
+          </p>
+        </div>
+
+        <div class="bg-amber-50 rounded-xl p-6 border border-amber-100">
+          <h3 class="text-xs font-bold font-mono uppercase tracking-widest text-amber-600 mb-3">Migration Complexity</h3>
+          <p class="text-amber-900/80 leading-relaxed font-medium">
+            {comp.migration_complexity}
+          </p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</Layout>

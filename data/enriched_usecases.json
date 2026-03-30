@@ -4,18 +4,20 @@
     "crm_id": "pipedrive",
     "industry": "B2B SaaS",
     "title": "Pipedrive Deployment in B2B SaaS",
-    "viability_score": 6.5,
+    "viability_score": 7.2,
     "critical_missing_features": [
       "Advanced revenue forecasting",
-      "Automated customer health scoring",
-      "Native integration with popular B2B SaaS metrics tools"
+      "Automated sales analytics",
+      "Native CPQ (Configure, Price, Quote) functionality",
+      "Enhanced customer success management"
     ],
     "integration_workarounds": {
-      "revenue_forecasting": "Adaptive Insights or Anaplan",
-      "customer_health_scoring": "Gainsight or Totango",
-      "metrics_tools": "Mixpanel or ChartMogul"
+      "revenue_forecasting": "Integration with Adaptive Insights or Anaplan",
+      "sales_analytics": "Integration with Tableau or Looker",
+      "cpq_functionality": "Integration with Apttus or Conga",
+      "customer_success": "Integration with Gainsight or Totango"
     },
-    "final_verdict": "Pipedrive can be a viable CRM solution for B2B SaaS companies, but requires significant integration work to fill critical feature gaps."
+    "final_verdict": "While Pipedrive is a viable option for B2B SaaS companies, its lack of advanced features requires significant integration workarounds, making it a less desirable choice for larger, more complex organizations."
   },
   {
     "id": "pipedrive-for-manufacturing",
@@ -25,19 +27,17 @@
     "viability_score": 6.5,
     "critical_missing_features": [
       "Bill of Materials (BOM) management",
-      "Production scheduling and workflow",
-      "Inventory management and tracking",
+      "Production scheduling and workflow automation",
       "Quality control and inspection management",
-      "Supply chain management and vendor tracking"
+      "Inventory management with warehouse and supply chain visibility"
     ],
     "integration_workarounds": {
-      "bom_management": "Integrate with a 3rd party tool like Autodesk or SolidWorks",
-      "production_scheduling": "Use a tool like Asana or Trello for workflow management",
-      "inventory_management": "Integrate with a tool like TradeGecko or Zoho Inventory",
-      "quality_control": "Use a tool like QualityZeal or QMS for quality control",
-      "supply_chain_management": "Integrate with a tool like SAP or Oracle for supply chain management"
+      "bom_management": "Integrate with Prodsmart or Katana for BOM management",
+      "production_scheduling": "Use Zapier to integrate with MRPeasy for production scheduling",
+      "quality_control": "Implement a custom solution using Pipedrive's API and a third-party quality control tool like QMS by Qualio",
+      "inventory_management": "Integrate with TradeGecko or Zoho Inventory for inventory management"
     },
-    "final_verdict": "While Pipedrive can be used in the manufacturing sector, its lack of industry-specific features requires significant integration with 3rd party tools, making it a less viable option compared to industry-specific CRM solutions."
+    "final_verdict": "While Pipedrive can be used in the manufacturing sector, its lack of industry-specific features requires significant integration workarounds, making it a less viable option compared to industry-specific CRMs like Salesforce Manufacturing Cloud."
   },
   {
     "id": "pipedrive-for-real-estate",
@@ -48,16 +48,16 @@
     "critical_missing_features": [
       "Property listing management",
       "Client matching with properties based on specific criteria",
-      "Automated property valuation and comparison tools",
+      "Automated property valuation and market analysis",
       "Integration with MLS (Multiple Listing Service) systems"
     ],
     "integration_workarounds": {
-      "property_listings": "Integrate with services like Zillow or Realtor.com",
-      "client_matching": "Utilize AI-powered matching tools from companies like HouseCanary",
-      "property_valuation": "Leverage services from companies like CoreLogic for automated valuations",
-      "MLS_integration": "Use third-party connectors like MLS API or Bridge Interactive"
+      "property_listings": "Integrate with services like Zillow or Realtor.com for property listings",
+      "client_matching": "Use AI-powered matching tools like PropertyBase or Real Geeks",
+      "property_valuation": "Integrate with services like HouseCanary or Clear Capital for automated valuations",
+      "mls_integration": "Use third-party connectors like MLS Integration or Bridge Interactive"
     },
-    "final_verdict": "While Pipedrive can be adapted for real estate with significant integration and customization, native real estate CRM solutions like RealtyJuggler or Real Geeks might be more viable options due to their out-of-the-box feature sets tailored to the industry."
+    "final_verdict": "While Pipedrive can be customized for real estate, its lack of industry-specific features necessitates significant integration workarounds, making it a viable but not ideal choice for large-scale real estate deployments."
   },
   {
     "id": "hubspot-for-b2b-saas",
@@ -68,14 +68,14 @@
     "critical_missing_features": [
       "Advanced revenue recognition and forecasting",
       "Native support for usage-based pricing models",
-      "Automated customer health scoring and alerts"
+      "Enhanced customer health scoring and churn prediction"
     ],
     "integration_workarounds": {
-      "revenue_recognition": "Integrate with Sage Intacct or Netsuite for advanced financial management",
-      "usage_based_pricing": "Use a third-party billing platform like Stripe or Recurly",
-      "customer_health_scoring": "Implement a custom solution using HubSpot's API and a data science platform like DataRobot"
+      "revenue_recognition": "Integrate with Sage Intacct or NetSuite for advanced financial management",
+      "usage_based_pricing": "Use a third-party tool like Meter or BillingPlatform for metered billing",
+      "customer_health_scoring": "Integrate with Gainsight or Totango for advanced customer success management"
     },
-    "final_verdict": "While HubSpot is a robust CRM, its deployment in B2B SaaS requires significant customization and third-party integrations to address critical missing features."
+    "final_verdict": "While HubSpot is a solid choice for B2B SaaS companies, its limitations in revenue recognition, usage-based pricing, and customer health scoring necessitate significant integration workarounds to achieve operational excellence."
   },
   {
     "id": "hubspot-for-manufacturing",
@@ -86,16 +86,16 @@
     "critical_missing_features": [
       "Bill of Materials (BOM) management",
       "Production scheduling and planning",
-      "Inventory management and tracking",
+      "Inventory management with warehouse tracking",
       "Quality control and inspection management",
-      "Supply chain management and optimization"
+      "Supply chain management with vendor tracking"
     ],
     "integration_workarounds": {
-      "bom_management": "Integrate with Autodesk Fusion 360 or SolidWorks",
-      "production_scheduling": "Use 3rd party tools like Asana or Trello for workflow management",
-      "inventory_management": "Integrate with TradeGecko or Zoho Inventory",
-      "quality_control": "Use 3rd party tools like QualityZeal or QMS for quality management",
-      "supply_chain_management": "Integrate with SAP APO or Manhattan Associates"
+      "bom_management": "Integrate with Autodesk Fusion 360 or similar CAD/PLM tools",
+      "production_scheduling": "Use 3rd party tools like Asana, Trello, or MS Project for custom workflows",
+      "inventory_management": "Integrate with TradeGecko, Zoho Inventory, or similar inventory management systems",
+      "quality_control": "Use 3rd party tools like QualityKick or similar quality control management systems",
+      "supply_chain_management": "Integrate with SAP Ariba, Oracle Procurement Cloud, or similar supply chain management systems"
     },
     "final_verdict": "While HubSpot can be used in the manufacturing sector, its lack of industry-specific features requires significant integration with 3rd party tools, making it a less viable option compared to industry-specific solutions."
   },
@@ -109,14 +109,17 @@
       "Property listing management",
       "Transaction pipeline tracking",
       "Client matching and referral management",
-      "Automated property valuation and CMA generation"
+      "Customizable property showing scheduling",
+      "Integrations with popular multiple listing services (MLS)"
     ],
     "integration_workarounds": {
-      "property_listings": "Integrate with Zillow or Realtor.com APIs",
-      "transaction_pipeline": "Use Zapier to connect with transaction management tools like Dotloop or Skyslope",
-      "client_matching": "Implement a custom solution using HubSpot's workflow API or integrate with a specialized real estate CRM like RealtyJuggler"
+      "property_listings": "Integrate with services like Zillow or Realtor.com",
+      "transaction_pipeline": "Utilize tools like Pipedrive or Propeller CRM",
+      "client_matching": "Leverage AI-powered matching tools like Real Geeks",
+      "scheduling": "Integrate with calendar services like Calendly",
+      "mls_integration": "Partner with services like MLS Listings or FlexMLS"
     },
-    "final_verdict": "While HubSpot can be adapted for real estate use cases, its lack of industry-specific features necessitates significant customization and third-party integrations, making it a less-than-ideal choice for large-scale real estate deployments."
+    "final_verdict": "While HubSpot can be adapted for real estate, significant investments in third-party integrations and custom workflows are necessary to fill critical feature gaps."
   },
   {
     "id": "salesforce-for-b2b-saas",
@@ -126,19 +129,19 @@
     "viability_score": 7.5,
     "critical_missing_features": [
       "Usage-based billing",
-      "Tiered pricing management",
-      "Automated revenue recognition",
-      "Advanced subscription management",
-      "Native integration with popular SaaS metrics tools"
+      "Advanced revenue recognition",
+      "Native product catalog management",
+      "Automated subscription management",
+      "Real-time data integration with external systems"
     ],
     "integration_workarounds": {
       "usage_based_billing": "Zuora or Recurly",
-      "tiered_pricing_management": "Pricefx or Vendavo",
-      "automated_revenue_recognition": "Sage Intacct or NetSuite",
-      "advanced_subscription_management": "Zuora or Chargebee",
-      "saas_metrics_tools": "Mixpanel or ChartMogul"
+      "advanced_revenue_recognition": "Sage Intacct or NetSuite",
+      "product_catalog_management": "Pimcore or Akeneo",
+      "subscription_management": "Chargebee or Stripe",
+      "real_time_data_integration": "MuleSoft or Talend"
     },
-    "final_verdict": "While Salesforce Sales Cloud is a robust CRM, its deployment in the B2B SaaS sector requires significant integration with third-party tools to address critical missing features, making it a viable but imperfect solution."
+    "final_verdict": "While Salesforce Sales Cloud provides a solid foundation for B2B SaaS sales teams, significant investments in third-party integrations are required to address critical missing features and achieve operational efficiency."
   },
   {
     "id": "salesforce-for-manufacturing",
@@ -156,7 +159,7 @@
     "integration_workarounds": {
       "third_party_tools": [
         "Rootstock Software for ERP and manufacturing operations",
-        "Kenandy for cloud-based ERP and manufacturing management",
+        "Kenandy for cloud-based ERP and manufacturing execution",
         "AspenTech for asset optimization and predictive maintenance"
       ],
       "integration_platforms": [
@@ -173,18 +176,18 @@
     "title": "Salesforce Sales Cloud Deployment in Real Estate",
     "viability_score": 6.5,
     "critical_missing_features": [
-      "Property listing management",
-      "Commission tracking and management",
-      "Integrations with MLS (Multiple Listing Service) systems",
-      "Customizable property inspection and appraisal workflows"
+      "Property Listing Management",
+      "Transaction Management",
+      "Client Relationship Management with custom property matching",
+      "Automated property valuation and market analysis"
     ],
     "integration_workarounds": {
-      "property_listing_management": "Appfolio or PropertyMatrix",
-      "commission_tracking": "Commissionly or Brokermint",
-      "mls_integration": "MLS Integration by CoreLogic or Realtors Property Resource (RPR)",
-      "custom_workflows": "Nintex or K2 for workflow automation"
+      "Property Listing Management": "Appfolio or Propertybase",
+      "Transaction Management": "Skyslope or Dotloop",
+      "Client Relationship Management": "Custom development or third-party apps like RealtyJuggler",
+      "Automated property valuation and market analysis": "Integrations with services like HouseCanary or CoreLogic"
     },
-    "final_verdict": "While Salesforce Sales Cloud can be deployed in the Real Estate sector, significant investments in third-party tools and custom development are required to address critical missing features and industry-specific workflows."
+    "final_verdict": "While Salesforce Sales Cloud can be customized for real estate, significant investments in third-party tools and custom development are required to address critical missing features."
   },
   {
     "id": "zoho-for-b2b-saas",
@@ -202,7 +205,7 @@
       "advanced_sales_forecasting": "InsightSquared or Clari",
       "B2B_SaaS_metrics": "Mixpanel or Baremetrics"
     },
-    "final_verdict": "While Zoho CRM can be a viable option for B2B SaaS companies, its limitations in native recurring revenue management and advanced sales forecasting necessitate significant integration workarounds to meet the industry's specific needs."
+    "final_verdict": "While Zoho CRM can be adapted for B2B SaaS, its limitations in native recurring revenue management and advanced sales analytics necessitate significant integration workarounds."
   },
   {
     "id": "zoho-for-manufacturing",
@@ -213,23 +216,16 @@
     "critical_missing_features": [
       "Bill of Materials (BOM) management",
       "Production scheduling and workflow automation",
-      "Inventory management with warehouse and supply chain tracking",
       "Quality control and inspection management",
-      "Compliance management for regulatory standards like ISO 9001"
+      "Supply chain management and vendor tracking"
     ],
     "integration_workarounds": {
-      "third_party_tools": [
-        "Katana for manufacturing ERP",
-        "TradeGecko for inventory management",
-        "SAP Business One for production planning and scheduling"
-      ],
-      "integration_platforms": [
-        "MuleSoft",
-        "Jitterbit",
-        "Talend"
-      ]
+      "bom_management": "Integrate with Zoho Inventory or 3rd party tools like TradeGecko or Katana",
+      "production_scheduling": "Use Zoho Creator or 3rd party tools like Asana or Trello for workflow automation",
+      "quality_control": "Integrate with Zoho Quality or 3rd party tools like Qualityze or ETQ",
+      "supply_chain_management": "Use Zoho Inventory or 3rd party tools like SAP Business One or Microsoft Dynamics 365"
     },
-    "final_verdict": "While Zoho CRM can be customized for manufacturing, its out-of-the-box features are insufficient, requiring significant integration with third-party tools to fill critical gaps."
+    "final_verdict": "While Zoho CRM can be customized for manufacturing, its out-of-the-box features are insufficient, requiring significant integration workarounds to meet industry-specific needs."
   },
   {
     "id": "zoho-for-real-estate",
@@ -239,17 +235,17 @@
     "viability_score": 6.5,
     "critical_missing_features": [
       "Property listing management",
-      "Commission tracking",
-      "Client matching algorithms",
-      "Integrations with popular MLS services"
+      "Client matching and lead scoring based on property preferences",
+      "Automated property showing scheduling",
+      "Integration with MLS (Multiple Listing Service) feeds",
+      "Customizable property transaction workflows"
     ],
     "integration_workarounds": {
-      "property_listings": "Integrate with services like Realtor.com or Zillow via APIs",
-      "commission_tracking": "Utilize Zoho's custom module builder or integrate with accounting software like QuickBooks",
-      "client_matching": "Leverage Zoho's AI-powered sales forecasting or integrate with third-party services like HomeLight",
-      "mls_integration": "Use third-party connectors like MLS Integration by Zoho or develop custom integrations"
+      "property_listings": "Integrate with services like Realtor.com or Zillow through APIs",
+      "client_matching": "Utilize machine learning services from Google Cloud or AWS to develop custom lead scoring models",
+      "showing_scheduling": "Integrate with calendar services like Calendly or ScheduleOnce for automated scheduling"
     },
-    "final_verdict": "While Zoho CRM can be adapted for real estate, its lack of industry-specific features necessitates significant customization and third-party integrations, making it a viable but not ideal choice."
+    "final_verdict": "While Zoho CRM can be customized for real estate, its lack of industry-specific features out-of-the-box necessitates significant integration work, making it a viable but not ideal choice for large-scale real estate operations."
   },
   {
     "id": "zendesk-for-b2b-saas",
@@ -269,7 +265,7 @@
       "cpq_functionality": "Implementing a dedicated CPQ solution such as Apttus or Conga",
       "sales_performance_management": "Leveraging a specialized sales performance management platform like Xactly"
     },
-    "final_verdict": "While Zendesk Sell can be a viable CRM solution for B2B SaaS companies, its limitations in key areas necessitate significant investment in third-party integrations to fill critical functionality gaps."
+    "final_verdict": "While Zendesk Sell provides a solid foundation for B2B SaaS sales teams, its limitations in critical areas necessitate significant investments in third-party integrations to achieve optimal functionality."
   },
   {
     "id": "zendesk-for-manufacturing",
@@ -281,17 +277,15 @@
       "Bill of Materials (BOM) management",
       "Production scheduling and workflow automation",
       "Quality control and inspection management",
-      "Inventory management and tracking",
-      "Supply chain management and logistics integration"
+      "Supply chain management and vendor tracking"
     ],
     "integration_workarounds": {
-      "bom_management": "Integrate with Autodesk Fusion 360 or similar CAD/PLM tools",
-      "production_scheduling": "Use Zapier or MuleSoft to integrate with Asana, Trello, or MS Project",
-      "quality_control": "Implement a custom solution using Jitterbit or Talend for integration with quality control software",
-      "inventory_management": "Integrate with TradeGecko, Zoho Inventory, or similar inventory management tools",
-      "supply_chain_management": "Use EDI or API integration with logistics providers like ShipStation or Freightos"
+      "bom_management": "Integrate with ERP systems like SAP or Oracle",
+      "production_scheduling": "Use 3rd party tools like Asana or Trello for workflow automation",
+      "quality_control": "Integrate with quality management systems like ISO 9001",
+      "supply_chain_management": "Use 3rd party logistics and supply chain management tools like TradeGecko"
     },
-    "final_verdict": "While Zendesk Sell can be customized for manufacturing, its out-of-the-box functionality is lacking, and significant investments in third-party integrations or custom development are required to fill critical gaps."
+    "final_verdict": "While Zendesk Sell can be used in the manufacturing sector, its lack of industry-specific features requires significant integration workarounds, making it a less-than-ideal choice without substantial customization and 3rd party tooling."
   },
   {
     "id": "zendesk-for-real-estate",
@@ -301,19 +295,19 @@
     "viability_score": 6.5,
     "critical_missing_features": [
       "Property listing management",
-      "Client matching and lead scoring based on property preferences",
-      "Automated MLS integration",
-      "Customizable property tour scheduling",
-      "Built-in document management for contracts and offers"
+      "Client matching and lead routing based on property preferences",
+      "Automated property showing scheduling",
+      "Integration with MLS (Multiple Listing Service) systems",
+      "Customizable commission tracking and reporting"
     ],
     "integration_workarounds": {
       "property_listings": "Integrate with services like Zillow or Realtor.com via APIs",
-      "client_matching": "Utilize machine learning services from Google Cloud or AWS to develop custom models",
-      "mls_integration": "Partner with third-party providers like CoreLogic or Black Knight for data feeds",
-      "tour_scheduling": "Integrate with calendar services like Calendly or ScheduleOnce",
-      "document_management": "Use services like DocuSign or Adobe Sign for electronic signatures and document storage"
+      "client_matching": "Utilize AI-powered matching tools from companies like HouseCanary or RealGeeks",
+      "showing_scheduling": "Implement scheduling tools like Calendly or ScheduleOnce",
+      "mls_integration": "Partner with MLS providers like CoreLogic or Black Knight for data feeds",
+      "commission_tracking": "Leverage accounting software like QuickBooks or Xero for customized reporting"
     },
-    "final_verdict": "While Zendesk Sell can be customized for real estate, its lack of industry-specific features necessitates significant integration workarounds, making it a viable but not ideal choice for this sector."
+    "final_verdict": "While Zendesk Sell can be adapted for real estate, significant investments in third-party integrations and custom development are necessary to address critical missing features and fully support the industry's unique workflows."
   },
   {
     "id": "activecampaign-for-b2b-saas",
@@ -322,18 +316,17 @@
     "title": "ActiveCampaign Deployment in B2B SaaS",
     "viability_score": 7.2,
     "critical_missing_features": [
-      "Advanced sales forecasting",
-      "Customizable product catalog",
+      "Advanced lead scoring with custom attribute weighting",
       "Native CPQ (Configure, Price, Quote) functionality",
-      "Enhanced customer success metrics"
+      "Enhanced sales forecasting with machine learning predictions",
+      "Out-of-the-box integration with popular B2B SaaS billing systems"
     ],
-    "integration_workarounds": {
-      "sales_forecasting": "Hubspot Sales Hub or Salesforce",
-      "product_catalog": "PandaDoc or Proposify",
-      "cpq_functionality": "Apttus or Conga",
-      "customer_success_metrics": "Gainsight or Totango"
-    },
-    "final_verdict": "While ActiveCampaign is a robust marketing automation platform, its limitations in sales forecasting, product catalog management, and CPQ functionality make it less suitable for B2B SaaS companies without significant integration workarounds."
+    "integration_workarounds": [
+      "Integrating with HubSpot CPQ for advanced quoting capabilities",
+      "Utilizing Zapier or MuleSoft for custom integrations with billing systems like Stripe or Recurly",
+      "Leveraging third-party lead scoring tools like Calendly or MadKudu"
+    ],
+    "final_verdict": "While ActiveCampaign is a robust marketing automation platform, its deployment in the B2B SaaS sector requires significant integration workarounds to address critical missing features, making it a viable but not ideal choice."
   },
   {
     "id": "activecampaign-for-manufacturing",
@@ -344,16 +337,18 @@
     "critical_missing_features": [
       "Bill of Materials (BOM) management",
       "Production scheduling and workflow automation",
+      "Inventory management and tracking",
       "Quality control and inspection management",
       "Supply chain management and vendor tracking"
     ],
     "integration_workarounds": {
-      "bom_management": "Integrate with a 3rd party tool like Katana or Zoho Inventory",
+      "bom_management": "Integrate with a 3rd party tool like Autodesk Fusion or SAP PLM",
       "production_scheduling": "Use a tool like Asana or Trello for workflow automation",
-      "quality_control": "Implement a separate QA tool like Qualityze or QMS",
-      "supply_chain_management": "Integrate with a tool like TradeGecko or Cin7"
+      "inventory_management": "Integrate with a tool like TradeGecko or Zoho Inventory",
+      "quality_control": "Use a tool like Qualityze or ETQ Reliance",
+      "supply_chain_management": "Integrate with a tool like SAP APO or Oracle SCM Cloud"
     },
-    "final_verdict": "While ActiveCampaign can be used in the manufacturing sector, its lack of industry-specific features requires significant integration workarounds, making it a less-than-ideal choice without substantial customization and 3rd party tooling."
+    "final_verdict": "While ActiveCampaign can be used in the manufacturing sector, its lack of industry-specific features requires significant integration with 3rd party tools, making it a less viable option compared to industry-specific solutions."
   },
   {
     "id": "activecampaign-for-real-estate",
@@ -364,33 +359,33 @@
     "critical_missing_features": [
       "Property listing management",
       "Client matching and lead routing",
-      "Transaction pipeline management",
-      "Customizable property showing scheduling"
+      "Transaction and commission tracking",
+      "Customizable property showings and open house scheduling"
     ],
     "integration_workarounds": {
-      "property_listings": "Integrate with services like Zillow or Realtor.com",
-      "transaction_management": "Use services like Dotloop or Skyslope",
-      "client_matching": "Integrate with AI-powered matching tools like Real Geeks"
+      "property_listings": "Integrate with services like Zillow or Realtor.com via APIs or Zapier",
+      "client_matching": "Utilize third-party plugins like PropertyBase or Real Geeks",
+      "transaction_tracking": "Leverage accounting software like QuickBooks or Xero through API integrations"
     },
-    "final_verdict": "ActiveCampaign can be viable for real estate with strategic third-party integrations to fill critical gaps in property and transaction management."
+    "final_verdict": "ActiveCampaign can be viable for real estate with strategic third-party integrations to fill critical gaps in property and client management functionalities."
   },
   {
     "id": "monday-for-b2b-saas",
     "crm_id": "monday",
     "industry": "B2B SaaS",
     "title": "Monday Sales CRM Deployment in B2B SaaS",
-    "viability_score": 7.2,
+    "viability_score": 6.5,
     "critical_missing_features": [
       "Native CPQ (Configure, Price, Quote) functionality",
       "Advanced sales forecasting and pipeline management",
       "Out-of-the-box integration with popular B2B SaaS billing systems"
     ],
     "integration_workarounds": {
-      "cpq": "Integration with third-party CPQ tools like QuoteWerks or PandaDoc",
-      "forecasting": "Utilizing external data analytics platforms such as Google Analytics or Mixpanel",
-      "billing_integration": "Zapier or MuleSoft for connecting with billing systems like Stripe or Recurly"
+      "cpq": "Integration with third-party CPQ tools like Apttus or Conga",
+      "forecasting": "Utilization of external data analytics platforms like Tableau or Power BI",
+      "billing_integration": "Zapier or MuleSoft integrations with billing systems like Stripe or Recurly"
     },
-    "final_verdict": "While Monday Sales CRM offers a robust foundation, its deployment in B2B SaaS requires significant third-party integrations to address critical feature gaps, thus affecting overall total cost of ownership."
+    "final_verdict": "While Monday Sales CRM offers a robust foundation, its deployment in B2B SaaS requires significant supplementation with third-party tools to address critical feature gaps."
   },
   {
     "id": "monday-for-manufacturing",
@@ -400,17 +395,17 @@
     "viability_score": 6.5,
     "critical_missing_features": [
       "Bill of Materials (BOM) management",
-      "Production scheduling and workflow automation",
-      "Quality control and inspection management",
-      "Supply chain management and vendor tracking"
+      "Production scheduling integration",
+      "Quality control and inspection workflows",
+      "Supply chain management"
     ],
     "integration_workarounds": {
-      "bom_management": "Integrate with Autodesk or SolidWorks for BOM management",
-      "production_scheduling": "Use Zapier to integrate with Microsoft Dynamics or SAP for production scheduling",
-      "quality_control": "Implement a custom solution using Monday's API and a third-party quality control tool",
-      "supply_chain_management": "Integrate with TradeGecko or Zoho Inventory for supply chain management"
+      "bom_management": "Integrate with Autodesk Fusion 360 or Similar CAD software",
+      "production_scheduling": "Use 3rd party tools like Asana or Trello for custom workflows",
+      "quality_control": "Integrate with external quality control software like ETQ Reliance",
+      "supply_chain_management": "Use 3rd party logistics and supply chain management tools like TradeGecko"
     },
-    "final_verdict": "While Monday Sales CRM can be customized for manufacturing, its lack of native support for critical manufacturing features necessitates significant integration workarounds, making it a viable but imperfect solution."
+    "final_verdict": "While Monday Sales CRM can be customized for manufacturing, its lack of native support for critical manufacturing workflows necessitates significant integration workarounds, making it a less desirable choice for this industry."
   },
   {
     "id": "monday-for-real-estate",
@@ -419,28 +414,20 @@
     "title": "Monday Sales CRM Deployment in Real Estate",
     "viability_score": 6.5,
     "critical_missing_features": [
-      "Property Listing Management",
-      "Client Matching Algorithm",
-      "Automated Property Showing Scheduling",
-      "Integrated Document Management for Contracts and Offers"
+      "Property listing management",
+      "Client matching and lead scoring based on property preferences",
+      "Automated property showing scheduling",
+      "Integration with MLS (Multiple Listing Service) systems",
+      "Customizable property transaction workflows"
     ],
     "integration_workarounds": {
-      "workarounds": [
-        {
-          "tool": "PropertyMuse",
-          "feature": "Property Listing Management"
-        },
-        {
-          "tool": "ShowMojo",
-          "feature": "Automated Property Showing Scheduling"
-        },
-        {
-          "tool": "DocuSign",
-          "feature": "Integrated Document Management"
-        }
+      "third_party_tools": [
+        "PropertyBase for property listing management",
+        "MLS integration via API providers like Bridge Interactive",
+        "Calendly for automated property showing scheduling"
       ]
     },
-    "final_verdict": "While Monday Sales CRM can be customized for real estate, its out-of-the-box functionality is lacking, requiring significant integration with third-party tools to be viable."
+    "final_verdict": "While Monday Sales CRM can be adapted for real estate with additional integrations, native support for critical industry features is lacking, making it a less desirable choice without significant customization and third-party tool investment."
   },
   {
     "id": "freshsales-for-b2b-saas",
@@ -451,16 +438,16 @@
     "critical_missing_features": [
       "Advanced sales forecasting",
       "Customizable product catalog",
-      "Native CPQ functionality",
-      "Enhanced customer success metrics"
+      "Native CPQ (Configure, Price, Quote) functionality",
+      "Integration with popular B2B SaaS metrics tools"
     ],
     "integration_workarounds": {
-      "sales_forecasting": "Integration with external tools like Salesforce Einstein or HubSpot Sales",
-      "product_catalog": "Utilizing e-commerce platforms like Shopify or Magento",
-      "cpq_functionality": "Implementing a dedicated CPQ solution such as Apttus or Conga",
-      "customer_success": "Leveraging customer success platforms like Gainsight or Totango"
+      "sales_forecasting": "Hubspot Sales Hub or Salesforce Einstein",
+      "product_catalog": "Pimcore or Akeneo",
+      "cpq_functionality": "Apttus or Conga",
+      "metrics_tools": "Mixpanel or ChartMogul"
     },
-    "final_verdict": "While Freshsales is a viable option for B2B SaaS companies, its limitations in advanced sales forecasting, product catalog management, and CPQ functionality necessitate significant integration workarounds to achieve optimal results."
+    "final_verdict": "While Freshsales is a viable option for B2B SaaS companies, its lack of advanced features requires significant integration workarounds, making it a less desirable choice for larger or more complex organizations."
   },
   {
     "id": "freshsales-for-manufacturing",
@@ -472,14 +459,17 @@
       "Bill of Materials (BOM) management",
       "Production scheduling and workflow",
       "Inventory management and tracking",
-      "Quality control and inspection management"
+      "Quality control and inspection management",
+      "Supplier and vendor management"
     ],
     "integration_workarounds": {
       "bom_management": "Integrate with Zoho Inventory or TradeGecko",
-      "production_scheduling": "Use Zapier to connect with manufacturing execution systems like Katana or MRPeasy",
-      "inventory_management": "Integrate with third-party logistics providers like ShipStation or Fulfillment by Amazon"
+      "production_scheduling": "Use Zapier to connect with production planning tools like Asana or Trello",
+      "inventory_management": "Integrate with TradeGecko or Zoho Inventory",
+      "quality_control": "Use Freshsales' custom module to create a quality control workflow",
+      "supplier_management": "Integrate with supplier management tools like Procurify"
     },
-    "final_verdict": "While Freshsales can be adapted for manufacturing, its lack of native support for critical manufacturing workflows necessitates significant integration workarounds, making it a less-than-ideal choice for this industry."
+    "final_verdict": "While Freshsales can be customized to fit manufacturing industry needs, its out-of-the-box features are lacking, requiring significant integration workarounds to fill critical gaps."
   },
   {
     "id": "freshsales-for-real-estate",
@@ -489,17 +479,19 @@
     "viability_score": 6.5,
     "critical_missing_features": [
       "Property listing management",
-      "Automated property matching",
-      "Client portal for document sharing",
-      "Customizable commission tracking"
+      "Client matching and lead scoring based on property preferences",
+      "Automated property showing scheduling",
+      "Integration with MLS (Multiple Listing Service) systems",
+      "Customizable property-centric sales pipelines"
     ],
     "integration_workarounds": {
-      "property_listings": "Integrate with Zillow or Realtor.com APIs",
-      "automated_matching": "Use AI-powered matching tools like PropertyBase",
-      "client_portal": "Implement a custom portal using Freshsales API and a web framework",
-      "commission_tracking": "Use a third-party accounting tool like QuickBooks"
+      "property_listings": "Integrate with services like Zillow or Realtor.com via APIs",
+      "client_matching": "Utilize machine learning-based tools like IBM Watson or Google Cloud AI Platform",
+      "showing_scheduling": "Integrate with calendar systems like Google Calendar or Microsoft Exchange",
+      "mls_integration": "Partner with MLS providers to develop custom connectors",
+      "custom_pipelines": "Leverage workflow automation tools like Zapier or Nintex"
     },
-    "final_verdict": "While Freshsales can be customized for real estate, its out-of-the-box features are insufficient, requiring significant integration workarounds to meet industry-specific needs."
+    "final_verdict": "While Freshsales provides a solid foundation for CRM, significant investments in custom development and third-party integrations are necessary to make it viable for the Real Estate sector."
   },
   {
     "id": "keap-for-b2b-saas",
@@ -508,18 +500,18 @@
     "title": "Keap Deployment in B2B SaaS",
     "viability_score": 6.5,
     "critical_missing_features": [
-      "Advanced revenue recognition and forecasting",
-      "Native support for subscription-based billing",
-      "Comprehensive customer success management",
-      "Integration with popular B2B SaaS metrics and KPI tracking tools"
+      "Advanced revenue recognition",
+      "Usage-based billing",
+      "Customizable product catalog",
+      "Native CPQ functionality"
     ],
     "integration_workarounds": {
-      "revenue_recognition": "Integrate with Sage or QuickBooks for advanced accounting",
-      "subscription_billing": "Use Stripe or Recurly for subscription management",
-      "customer_success": "Implement Gainsight or Totango for customer success management",
-      "metrics_tracking": "Integrate with ChartMogul or Baremetrics for SaaS metrics tracking"
+      "revenue_recognition": "Integrate with Sage or NetSuite",
+      "usage_based_billing": "Use Stripe or Recurly",
+      "product_catalog": "Integrate with Pimcore or Akeneo",
+      "cpq_functionality": "Use Configure One or Experlogix"
     },
-    "final_verdict": "Keap is a viable option for B2B SaaS companies, but requires significant integration workarounds to address critical missing features, making it a less desirable choice for larger or more complex organizations."
+    "final_verdict": "Keap is not the ideal choice for B2B SaaS companies due to missing critical features, requiring significant integration workarounds to achieve operational parity."
   },
   {
     "id": "keap-for-manufacturing",
@@ -536,10 +528,10 @@
     ],
     "integration_workarounds": {
       "bom_management": "Integrate with Prodsmart or Katana for BOM management",
-      "production_scheduling": "Use a third-party tool like Asprova or PlanetTogether for production scheduling",
+      "production_scheduling": "Use third-party tools like Asprova or PlanetTogether for production scheduling",
       "inventory_management": "Integrate with TradeGecko or Zoho Inventory for advanced inventory management",
-      "quality_control": "Use a tool like QualityKick or QMS for quality control and inspection management",
-      "predictive_maintenance": "Integrate with a machine learning platform like Uptake or Petasense for predictive maintenance"
+      "quality_control": "Use a separate QMS like QualityKick or Qooling",
+      "predictive_maintenance": "Integrate with Petasense or Augury for predictive maintenance capabilities"
     },
     "final_verdict": "Keap can be a viable CRM solution for manufacturing, but its limitations in core manufacturing functionalities necessitate significant third-party integrations to fill the gaps."
   },
@@ -551,19 +543,16 @@
     "viability_score": 6.5,
     "critical_missing_features": [
       "Property listing management",
-      "Transaction pipeline tracking",
-      "Client matching and lead routing based on property preferences",
-      "Automated property showing scheduling",
-      "Integrated document management for contracts and disclosures"
+      "Transaction and commission tracking",
+      "Integrations with MLS services",
+      "Customizable real estate workflows"
     ],
     "integration_workarounds": {
       "property_listings": "Zillow Tech Connect or Realtor.com integration",
-      "transaction_pipeline": "Pipedrive or Trello integration",
-      "client_matching": "Custom development using Keap's API",
-      "showing_scheduling": "Calendly or ScheduleOnce integration",
-      "document_management": "Docusign or HelloSign integration"
+      "transaction_management": "Dotloop or Skyslope integration",
+      "mls_services": "Bridge Interactive or CoreLogic integration"
     },
-    "final_verdict": "Keap can be a viable CRM for real estate with significant custom development and third-party integrations to fill critical gaps in property management and transaction workflow."
+    "final_verdict": "Keap can be a viable CRM for real estate with strategic third-party integrations to fill critical gaps in property listing management, transaction tracking, and MLS services."
   },
   {
     "id": "gohighlevel-for-b2b-saas",
@@ -577,11 +566,11 @@
       "Enhanced customer health scoring and churn prediction"
     ],
     "integration_workarounds": {
-      "revenue_recognition": "Integrate with Sage or QuickBooks",
+      "revenue_recognition": "Integrate with Sage or QuickBooks for advanced financial management",
       "product_led_growth": "Use Mixpanel or Amplitude for product analytics",
-      "customer_health_scoring": "Integrate with Gainsight or Totango for customer success metrics"
+      "customer_health_scoring": "Integrate with Gainsight or Totango for customer success management"
     },
-    "final_verdict": "While GoHighLevel can be a viable option for B2B SaaS companies, its lack of advanced revenue recognition and product-led growth features necessitates significant integration workarounds to achieve full operational visibility."
+    "final_verdict": "While GoHighLevel can be a viable option for B2B SaaS companies, its limitations in advanced financial management, product analytics, and customer success management require significant integration workarounds to achieve full operational visibility."
   },
   {
     "id": "gohighlevel-for-manufacturing",
@@ -592,15 +581,17 @@
     "critical_missing_features": [
       "Bill of Materials (BOM) management",
       "Production scheduling and workflow automation",
+      "Inventory management and tracking",
       "Quality control and inspection management",
-      "Inventory management with warehouse and supply chain visibility"
+      "Supply chain management and vendor tracking"
     ],
-    "integration_workarounds": {
-      "MRP/ERP integration": "Requires 3rd party tools like Katana, Zoho Inventory, or TradeGecko",
-      "Advanced reporting and analytics": "Needs integration with tools like Tableau, Power BI, or Google Data Studio",
-      "Supply chain management": "Requires additional tools like SAP Business One, Infor Syteline, or Epicor ERP"
-    },
-    "final_verdict": "While GoHighLevel can be adapted for manufacturing, its lack of native support for critical manufacturing workflows necessitates significant integration workarounds, making it a less-than-ideal choice without substantial customization and 3rd party tooling."
+    "integration_workarounds": [
+      "Integrating with ERP systems like SAP or Oracle for BOM and inventory management",
+      "Using 3rd party workflow automation tools like Zapier or Automate.io for production scheduling",
+      "Implementing a separate quality control and inspection management system like ISO 9001",
+      "Utilizing supply chain management software like TradeGecko or Zoho Inventory"
+    ],
+    "final_verdict": "While GoHighLevel can be used in the manufacturing sector, its lack of industry-specific features requires significant integration workarounds, making it a less-than-ideal choice without substantial customization and 3rd party tooling."
   },
   {
     "id": "gohighlevel-for-real-estate",
@@ -612,16 +603,16 @@
       "Property Listing Management",
       "Transaction Coordination",
       "Client Portal for Document Sharing",
-      "Automated Property Showing Scheduling",
+      "Customizable Property Showing Scheduling",
       "Native MLS Integration"
     ],
     "integration_workarounds": {
       "Property Listing Management": "Integrate with PropertyMuse or RealGeeks",
       "Transaction Coordination": "Use Dotloop or Skyslope",
-      "Client Portal for Document Sharing": "Integrate with ShareFile or DocuSign",
-      "Automated Property Showing Scheduling": "Use ShowingTime or ShowingPro",
+      "Client Portal for Document Sharing": "Integrate with SharePoint or Google Drive",
+      "Customizable Property Showing Scheduling": "Use ShowingTime or Calendly",
       "Native MLS Integration": "Develop a custom API integration with local MLS providers"
     },
-    "final_verdict": "While GoHighLevel offers a robust CRM foundation, its lack of native real estate features necessitates significant third-party integrations, making it a viable but imperfect choice for real estate businesses."
+    "final_verdict": "While GoHighLevel can be adapted for real estate, its lack of native support for critical industry features necessitates significant integration workarounds, making it a less-than-ideal choice without substantial customization and third-party tooling."
   }
 ]

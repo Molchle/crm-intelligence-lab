@@ -1,0 +1,20 @@
+{
+  "core_crm_id": "pipedrive",
+  "competitor_name": "Salesforce",
+  "seo_title": "Pipedrive vs Salesforce",
+  "winner": "Tie",
+  "ai_verdict": "Pipedrive's database limits are more transparent, with a clear 100,000 contact limit on the Professional plan, whereas Salesforce's limits are buried in fine print, with a 10,000 to 50,000 contact limit depending on the plan. On the UX side, Pipedrive's sales pipeline management is more streamlined, with a visual pipeline that allows for easy drag-and-drop deal management, while Salesforce's UX is cluttered with features that may overwhelm smaller teams.",
+  "migration_difficulty": "Moderate",
+  "core_pros": [
+    "Customizable sales pipelines with automated workflows",
+    "Native integration with Google Maps for territory management",
+    "Real-time sales insights with customizable dashboards"
+  ],
+  "competitor_pros": [
+    "Robust customer service features with multi-channel support",
+    "Advanced marketing automation with Pardot integration",
+    "Extensive app ecosystem with thousands of integrations"
+  ],
+  "technical_warning": "Salesforce's biggest technical debt is its outdated data model, which relies on a complex web of custom objects and relationships that can lead to data inconsistencies and performance issues.",
+  "ideal_for_core": "Mid-market B2B SaaS"
+}

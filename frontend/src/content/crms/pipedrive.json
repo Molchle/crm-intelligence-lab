@@ -1,0 +1,13 @@
+{
+  "id": "pipedrive",
+  "name": "Pipedrive",
+  "affiliate_url": "https://pipedrive.com/?ref=crmintelligencelab_live",
+  "starting_price": 14,
+  "has_free_tier": false,
+  "primary_category": "Sales CRM",
+  "features": [
+    "Pipeline Management",
+    "Email Tracking",
+    "API Access"
+  ]
+}

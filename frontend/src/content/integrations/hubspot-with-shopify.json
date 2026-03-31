@@ -1,0 +1,25 @@
+{
+  "core_crm_id": "hubspot",
+  "app_name": "Shopify",
+  "seo_title": "HubSpot Shopify Sync",
+  "sync_direction": "Two-way",
+  "ai_technical_analysis": "The integration between HubSpot and Shopify relies heavily on APIs to map customer and order data. However, the complexity of this mapping can lead to issues with data consistency and synchronization, particularly when dealing with custom fields and workflows. \n   Furthermore, the API limits imposed by both platforms can cause bottlenecks in data transfer, especially for large-scale e-commerce operations, resulting in potential delays and data loss. The technical nuances of this integration demand careful planning and monitoring to mitigate these risks.",
+  "friction_rating": 6,
+  "setup_time": "2 Hours",
+  "pros": [
+    "Streamlined sales pipeline",
+    "Enhanced customer insights",
+    "Automated order tracking"
+  ],
+  "cons": [
+    "API limit constraints",
+    "Custom field mapping issues",
+    "Potential data inconsistencies"
+  ],
+  "technical_warning": "The biggest risk in this integration is the potential for data duplication and inconsistencies due to mismatched field mappings and API synchronization delays.",
+  "integration_steps": [
+    "Connect HubSpot and Shopify APIs",
+    "Configure data mapping and workflows",
+    "Monitor and adjust synchronization settings"
+  ]
+}

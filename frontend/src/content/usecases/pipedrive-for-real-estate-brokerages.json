@@ -1,0 +1,23 @@
+{
+  "core_crm_id": "pipedrive",
+  "industry": "Real Estate Brokerages",
+  "seo_title": "Pipedrive CRM for Real Estate",
+  "setup_time": "2-3 Weeks",
+  "compliance_standard": "Standard",
+  "industry_pain_points": [
+    "Lead management and tracking",
+    "Property listing and matching",
+    "Commission and transaction management"
+  ],
+  "core_solutions": [
+    "Pipedrive's pipeline management",
+    "Custom fields for property attributes",
+    "Pipedrive's reporting and analytics"
+  ],
+  "custom_objects_mapping": [
+    "Deals -> Properties",
+    "Contacts -> Agents and Clients",
+    "Companies -> Brokerages and Firms"
+  ],
+  "ai_architect_verdict": "To effectively architect Pipedrive for Real Estate Brokerages, we must map industry-specific terms to Pipedrive's core objects. This involves creating custom fields for property attributes such as location, price, and type, and utilizing Pipedrive's pipeline management to track leads from initial contact to closed deals. However, potential bottlenecks may arise from the need for seamless integration with external property listing services and the requirement for robust reporting to manage commissions and transactions. The Pipedrive API will be crucial in addressing these challenges, particularly in handling large volumes of property data and ensuring compliance with industry standards."
+}

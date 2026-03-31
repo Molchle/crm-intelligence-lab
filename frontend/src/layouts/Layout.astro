@@ -1,50 +1,79 @@
 ---
-interface Props {
-  title: string;
-  description?: string;
-  schema?: string; // Přidána volitelná prop pro JSON-LD
-}
-
-const { 
-  title, 
-  description = "CRM Intelligence Lab - Technical Architecture Reviews & Live Audits",
-  schema
-} = Astro.props;
+const { title, description } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description || "Objective B2B CRM architecture audits, API rate limit analysis, and integration friction reports."} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    {schema && <script type="application/ld+json" set:html={schema} />}
   </head>
-  <body class="bg-slate-50 text-slate-900 antialiased min-h-screen selection:bg-indigo-500/30 selection:text-indigo-900">
-    <slot />
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased flex flex-col min-h-screen">
+    
+    <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-4 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="/" class="text-2xl font-black tracking-tighter text-slate-900 flex items-center gap-1">
+          <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+          CRM<span class="text-indigo-600">Lab_</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-bold text-slate-600">
+          <a href="/" class="hover:text-indigo-600 transition-colors">Core Audits</a>
+          <a href="#" class="hover:text-indigo-600 transition-colors">Versus Duels</a>
+          <a href="#" class="hover:text-indigo-600 transition-colors">Use Cases</a>
+        </div>
+        <div class="text-[10px] font-mono text-slate-400 uppercase tracking-widest bg-slate-100 px-2 py-1 rounded hidden lg:block">
+          Independent Architecture Reviews
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex-grow">
+      <slot />
+    </div>
+
+    <footer class="bg-slate-950 text-slate-400 py-16 px-6 border-t border-slate-900 mt-auto">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        
+        <div class="md:col-span-2">
+          <a href="/" class="text-2xl font-black tracking-tighter text-white mb-4 block">CRM<span class="text-indigo-500">Lab_</span></a>
+          <p class="text-sm leading-relaxed max-w-sm mb-6">
+            We analyze enterprise software architecture, API technical debt, and integration friction so B2B engineering and sales teams can deploy with confidence.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Database</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Core CRM Audits</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Ecosystem Integrations</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Competitor Alternatives</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Industry Deployments</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Legal & Compliance</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Data Processing</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Contact Engineering Team</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono">
+        <div class="text-slate-500">
+          &copy; 2026 CRM Intelligence Lab. All systems operational.
+        </div>
+        <div class="text-slate-500 bg-slate-900 p-3 rounded-lg border border-slate-800 max-w-3xl leading-relaxed">
+          <span class="text-amber-500 font-bold">FTC Affiliate Disclosure:</span> We are an independent software laboratory. We do not accept payment for favorable reviews. However, we may receive a commission if you initialize a deployment through our verified sandbox links. This funds our API load testing and allows us to keep the database free.
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
-
-<style is:global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  @layer base {
-    html {
-      font-family: 'Inter', system-ui, sans-serif;
-    }
-    
-    /* Zajištění, že všechny monospaced elementy použijí JetBrains */
-    code, kbd, samp, pre, .font-mono {
-      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
-    }
-  }
-</style>

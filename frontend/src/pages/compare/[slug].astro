@@ -1,0 +1,182 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro'; 
+
+export async function getStaticPaths() {
+  const comparisons = await getCollection('comparisons');
+  
+  return comparisons.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const comparison = entry.data;
+
+const coreCrm = await getEntry('crms', comparison.core_crm_id);
+
+if (!coreCrm) {
+  throw new Error(`Kritická chyba: CRM s ID ${comparison.core_crm_id} nebylo nalezeno!`);
+}
+
+const crmData = coreCrm.data;
+
+const getMigrationColor = (difficulty: string) => {
+  if (difficulty === 'Easy') return 'text-emerald-700 bg-emerald-50 border-emerald-200';
+  if (difficulty === 'Moderate') return 'text-amber-700 bg-amber-50 border-amber-200';
+  return 'text-red-700 bg-red-50 border-red-200';
+};
+
+const getWinnerColor = (winner: string) => {
+  if (winner === 'Core') return 'text-indigo-700 bg-indigo-50 border-indigo-200';
+  if (winner === 'Tie') return 'text-slate-700 bg-slate-100 border-slate-300';
+  return 'text-slate-500 bg-slate-50 border-slate-200';
+};
+---
+
+<Layout title={`${comparison.seo_title} | CRM Intelligence Lab`} description={comparison.ai_verdict.substring(0, 150)}>
+  <div class="min-h-screen bg-slate-50 font-sans text-slate-900 pb-32 pt-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <main class="lg:col-span-8">
+        
+        <div class="mb-10 p-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-200/60 text-slate-600 text-xs font-mono uppercase tracking-widest mb-4">
+            Architecture Duel
+          </div>
+          <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-8 text-slate-900 leading-tight">
+            {comparison.seo_title}
+          </h1>
+          
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mb-10">
+            <div class={`p-5 rounded-2xl border shadow-sm ${getWinnerColor(comparison.winner)}`}>
+              <div class="text-[10px] opacity-80 font-mono uppercase mb-1.5 tracking-wide">Overall Winner</div>
+              <div class="font-extrabold text-xl">
+                {comparison.winner === 'Core' ? crmData.name : comparison.winner === 'Competitor' ? comparison.competitor_name : 'It\'s a Tie'}
+              </div>
+            </div>
+            
+            <div class={`p-5 rounded-2xl border shadow-sm ${getMigrationColor(comparison.migration_difficulty)}`}>
+              <div class="text-[10px] opacity-80 font-mono uppercase mb-1.5 tracking-wide">Migration Difficulty</div>
+              <div class="font-extrabold text-xl">{comparison.migration_difficulty}</div>
+            </div>
+            
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hidden md:block">
+              <div class="text-[10px] text-slate-400 font-mono uppercase mb-1.5 tracking-wide">Ideal For</div>
+              <div class="font-bold text-sm text-slate-950 leading-tight">{comparison.ideal_for_core}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div class="bg-white rounded-3xl p-8 border border-indigo-100 shadow-lg shadow-indigo-100/50 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1.5 bg-indigo-500"></div>
+            <h3 class="text-xl font-black text-slate-900 mb-6 flex items-center justify-between">
+              {crmData.name}
+              <span class="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-1 rounded font-mono uppercase">Verified</span>
+            </h3>
+            <ul class="space-y-4">
+              {comparison.core_pros.map(pro => (
+                <li class="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                  <svg class="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  {pro}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-slate-100/50 rounded-3xl p-8 border border-slate-200">
+            <h3 class="text-xl font-black text-slate-700 mb-6">{comparison.competitor_name}</h3>
+            <ul class="space-y-4">
+              {comparison.competitor_pros.map(pro => (
+                <li class="flex items-start gap-3 text-sm text-slate-600">
+                  <svg class="w-5 h-5 text-slate-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  {pro}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-red-50 border-l-4 border-red-500 rounded-r-2xl p-6 mb-10 shadow-sm">
+          <h3 class="text-xs font-black text-red-900 uppercase tracking-widest mb-2 font-mono flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            Technical Debt Warning: {comparison.competitor_name}
+          </h3>
+          <p class="text-red-950 text-sm font-medium leading-relaxed">{comparison.technical_warning}</p>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-lg shadow-slate-100/50 border border-slate-200 p-8 md:p-12 prose prose-slate max-w-none prose-headings:font-black prose-p:text-slate-700 prose-p:leading-relaxed">
+          <h2 class="text-3xl font-black mb-8 pb-4 border-b border-slate-100 flex items-center gap-3">
+            <svg class="w-7 h-7 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            Final Architectural Verdict
+          </h2>
+          <div class="space-y-6 text-sm leading-relaxed prose prose-slate prose-sm max-w-none">
+            {comparison.ai_verdict.split('\n').filter(p => p.trim() !== '').map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+
+      </main>
+
+      <aside class="lg:col-span-4 relative">
+        <div class="sticky top-24 bg-slate-950 rounded-3xl p-8 shadow-2xl border border-slate-800 text-white">
+          
+          <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-800 gap-4">
+            <div>
+              <div class="text-[11px] font-mono text-emerald-400 mb-1.5 uppercase tracking-widest">
+                {comparison.winner === 'Core' ? 'Clear Technical Winner' : 
+                 comparison.winner === 'Tie' ? 'Our Top Pick for Scaling' : 
+                 'Best Alternative Option'}
+              </div>
+              <h3 class="text-2xl font-black text-white">{crmData.name}</h3>
+            </div>
+          </div>
+          
+          <div class="mb-6">
+            <div class="text-sm text-slate-400 mb-1.5 font-medium">Starting at</div>
+            <div class="text-4xl font-black text-white mb-1 flex items-baseline gap-1">
+              ${crmData.starting_price}
+              <span class="text-lg text-slate-500 font-normal">/mo</span>
+            </div>
+            <div class="text-[11px] text-slate-500 font-mono uppercase tracking-wide">{crmData.primary_category}</div>
+          </div>
+
+          {crmData.features && crmData.features.length > 0 && (
+            <ul class="space-y-4 mb-8 mt-6">
+              {crmData.features.map(feature => (
+                <li class="flex items-center gap-3.5 text-sm text-slate-300 font-medium">
+                  <svg class="w-5 h-5 text-indigo-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          )}
+
+     <a href={crmData.affiliate_url} target="_blank" rel="noopener noreferrer" class="block w-full bg-indigo-600 hover:bg-indigo-500 text-white text-center font-bold py-4 px-6 rounded-2xl transition-all shadow-lg shadow-indigo-600/30 mb-3">
+            Deploy {crmData.name} Architecture
+          </a>
+          
+          <a href={`https://www.google.com/search?q=${encodeURIComponent(comparison.competitor_name)}+crm+software`} target="_blank" rel="noopener noreferrer" class="block w-full bg-transparent hover:bg-slate-800 border border-slate-700 text-slate-400 hover:text-slate-300 text-center text-sm font-medium py-3 px-6 rounded-2xl transition-all mb-5">
+            Explore {comparison.competitor_name} Options
+          </a>
+          
+          <div class="text-center text-xs text-slate-500 font-mono flex flex-col items-center justify-center gap-1.5 mt-2">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+              Official {crmData.name} partner link
+            </span>
+          </div>
+          
+          <div class="text-center text-xs text-slate-500 font-mono flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            Official partner sandbox link
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</Layout>

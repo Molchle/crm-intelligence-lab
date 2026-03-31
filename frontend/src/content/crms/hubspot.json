@@ -1,0 +1,13 @@
+{
+  "id": "hubspot",
+  "name": "HubSpot",
+  "affiliate_url": "https://hubspot.com/?ref=crmintelligencelab_live",
+  "starting_price": 15,
+  "has_free_tier": true,
+  "primary_category": "All-in-One CRM",
+  "features": [
+    "Marketing Hub",
+    "Ticketing",
+    "Custom Objects"
+  ]
+}

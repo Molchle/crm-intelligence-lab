@@ -1,0 +1,23 @@
+{
+  "core_crm_id": "hubspot",
+  "industry": "Plumbing and HVAC Contractors",
+  "seo_title": "HubSpot for Plumbers & HVAC",
+  "setup_time": "2-3 Weeks",
+  "compliance_standard": "Standard",
+  "industry_pain_points": [
+    "Managing complex service schedules",
+    "Tracking customer equipment and maintenance history",
+    "Optimizing sales processes for new installations and repairs"
+  ],
+  "core_solutions": [
+    "HubSpot's Calendar and Meeting Links for scheduling",
+    "Custom Properties for equipment and maintenance tracking",
+    "Deals and Pipelines for sales process optimization"
+  ],
+  "custom_objects_mapping": [
+    "Deals -> Service Contracts",
+    "Contacts -> Homeowners or Facility Managers",
+    "Companies -> Contractor Companies or Property Management Firms"
+  ],
+  "ai_architect_verdict": "The custom object architecture for the Plumbing and HVAC Contractors industry in HubSpot will require careful planning to ensure seamless integration with existing workflows. This includes mapping Deals to Service Contracts, Contacts to Homeowners or Facility Managers, and Companies to Contractor Companies or Property Management Firms. Potential API bottlenecks may arise when integrating with external systems for equipment tracking or scheduling, necessitating thorough testing and optimization. HubSpot's APIs and webhooks will be crucial in automating data flows and minimizing manual data entry, thus streamlining operations and enhancing customer experience."
+}

@@ -1,0 +1,25 @@
+{
+  "core_crm_id": "pipedrive",
+  "app_name": "Shopify",
+  "seo_title": "Pipedrive Shopify Sync",
+  "sync_direction": "Two-way",
+  "ai_technical_analysis": "The integration between Pipedrive and Shopify relies on mapping customer data, orders, and products through APIs. However, the complexity arises from handling varying data formats and potential API rate limits, which can lead to synchronization delays or errors if not properly managed. \n   Furthermore, the data mapping process requires careful consideration of field matching, data type conversions, and handling missing or duplicate records, all of which can be time-consuming and prone to errors if not automated correctly, thus requiring a deep understanding of both systems' APIs and data structures.",
+  "friction_rating": 6,
+  "setup_time": "2 Hours",
+  "pros": [
+    "Automated order tracking",
+    "Unified customer view",
+    "Streamlined sales pipeline"
+  ],
+  "cons": [
+    "API limit concerns",
+    "Data mapping complexity",
+    "Potential sync errors"
+  ],
+  "technical_warning": "The biggest risk lies in the potential for data inconsistencies and errors due to mismatched field mappings or exceeded API limits, which can lead to incorrect sales pipeline updates or lost customer data.",
+  "integration_steps": [
+    "Connect Pipedrive and Shopify APIs",
+    "Map customer and order data fields",
+    "Configure automated sync schedules"
+  ]
+}

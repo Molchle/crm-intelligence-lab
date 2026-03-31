@@ -1,0 +1,23 @@
+{
+  "core_crm_id": "hubspot",
+  "industry": "Real Estate Brokerages",
+  "seo_title": "HubSpot CRM for Real Estate",
+  "setup_time": "2-3 Weeks",
+  "compliance_standard": "Standard",
+  "industry_pain_points": [
+    "Lead Management and Tracking",
+    "Property Listing and Matching",
+    "Client Communication and Follow-up"
+  ],
+  "core_solutions": [
+    "HubSpot Sales Hub for lead management",
+    "Custom Properties for property listings",
+    "HubSpot Workflows for automated follow-up"
+  ],
+  "custom_objects_mapping": [
+    "Deals -> Property Transactions",
+    "Contacts -> Buyers or Sellers",
+    "Companies -> Real Estate Agencies"
+  ],
+  "ai_architect_verdict": "The custom object architecture for Real Estate Brokerages in HubSpot CRM will involve creating custom properties for property listings, such as location, price range, and amenities. However, this may lead to potential API bottlenecks when integrating with external listing services or property management systems, particularly if the data models are not properly aligned. To mitigate this, it's essential to design a robust data mapping strategy and leverage HubSpot's API capabilities to ensure seamless data exchange and minimize latency."
+}

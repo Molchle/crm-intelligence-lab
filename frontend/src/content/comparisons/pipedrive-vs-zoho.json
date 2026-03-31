@@ -1,0 +1,20 @@
+{
+  "core_crm_id": "pipedrive",
+  "competitor_name": "Zoho",
+  "seo_title": "Pipedrive vs Zoho: Architecture Faceoff",
+  "winner": "Tie",
+  "ai_verdict": "Pipedrive's database limits are more forgiving for large sales teams, with a higher cap on custom fields and a more intuitive pipeline management system. However, Zoho's UX is more geared towards smaller businesses, with a steeper learning curve but more affordable pricing plans, making it a viable option for those who can navigate its complexities.",
+  "migration_difficulty": "Moderate",
+  "core_pros": [
+    "Customizable sales pipelines with automated workflows",
+    "Native integration with Google Maps for optimized route planning",
+    "Real-time sales analytics and forecasting tools"
+  ],
+  "competitor_pros": [
+    "All-in-one suite with integrated marketing and customer support tools",
+    "Customizable modules for tailored business needs",
+    "Affordable pricing plans with scalable options"
+  ],
+  "technical_warning": "Zoho's biggest technical debt lies in its monolithic architecture, which can lead to slower performance and more difficult maintenance as the system scales.",
+  "ideal_for_core": "Mid-market B2B sales teams"
+}

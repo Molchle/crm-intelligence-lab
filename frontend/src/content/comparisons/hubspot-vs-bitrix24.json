@@ -1,0 +1,20 @@
+{
+  "core_crm_id": "hubspot",
+  "competitor_name": "Bitrix24",
+  "seo_title": "HubSpot vs Bitrix24",
+  "winner": "Core",
+  "ai_verdict": "HubSpot's architecture is more scalable due to its cloud-based infrastructure, allowing for seamless integration with other tools and services. On the other hand, Bitrix24's on-premise deployment option can lead to database limitations and a cluttered UX, making it less ideal for large-scale operations. Additionally, HubSpot's data analytics capabilities are more robust, providing users with actionable insights to drive business growth. In contrast, Bitrix24's reporting features can be cumbersome to navigate, resulting in a steeper learning curve for users.",
+  "migration_difficulty": "Moderate",
+  "core_pros": [
+    "Robust sales and marketing automation",
+    "Advanced data analytics and reporting",
+    "Seamless integration with third-party tools"
+  ],
+  "competitor_pros": [
+    "All-in-one platform with built-in project management",
+    "Customizable workflow automation",
+    "Affordable pricing plans for small businesses"
+  ],
+  "technical_warning": "Bitrix24's monolithic architecture can lead to technical debt and scalability issues as the system grows.",
+  "ideal_for_core": "Mid-market B2B SaaS"
+}

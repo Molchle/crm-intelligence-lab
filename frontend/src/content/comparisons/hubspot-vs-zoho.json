@@ -1,0 +1,20 @@
+{
+  "core_crm_id": "hubspot",
+  "competitor_name": "Zoho",
+  "seo_title": "HubSpot vs Zoho",
+  "winner": "Core",
+  "ai_verdict": "HubSpot's database limits are more forgiving with a higher cap on custom objects and properties, whereas Zoho's UX, although improved, still lags behind in terms of intuitive workflow management. Zoho's pricing model, while attractive at first glance, can quickly escalate as the business scales, making HubSpot a more cost-effective option in the long run for larger teams.",
+  "migration_difficulty": "Moderate",
+  "core_pros": [
+    "Robust sales and marketing automation",
+    "Advanced analytics and reporting capabilities",
+    "Seamless integration with other HubSpot tools"
+  ],
+  "competitor_pros": [
+    "Affordable pricing model for small businesses",
+    "Comprehensive suite of business applications",
+    "Customizable workflow and pipeline management"
+  ],
+  "technical_warning": "Zoho's biggest technical debt lies in its outdated API architecture, which can lead to integration challenges and data inconsistencies.",
+  "ideal_for_core": "Mid-market B2B SaaS companies"
+}

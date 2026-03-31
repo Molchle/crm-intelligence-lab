@@ -1,0 +1,20 @@
+{
+  "core_crm_id": "hubspot",
+  "competitor_name": "Salesforce",
+  "seo_title": "HubSpot vs Salesforce",
+  "winner": "Tie",
+  "ai_verdict": "HubSpot's database limits are more forgiving for small to medium-sized businesses, with a more streamlined UX that reduces the learning curve for new users. However, Salesforce's vast array of features and customization options can become overwhelming and lead to technical debt if not properly managed, with a steeper learning curve that may require significant training and support.",
+  "migration_difficulty": "Moderate",
+  "core_pros": [
+    "Native integration with CMS and website tools",
+    "Streamlined sales and marketing automation",
+    "More affordable pricing for small to medium-sized businesses"
+  ],
+  "competitor_pros": [
+    "Highly customizable with a wide range of third-party integrations",
+    "Advanced analytics and reporting capabilities",
+    "Robust customer support and community resources"
+  ],
+  "technical_warning": "Salesforce's complex architecture and numerous customization options can lead to significant technical debt if not properly managed and optimized.",
+  "ideal_for_core": "Mid-market B2B SaaS"
+}

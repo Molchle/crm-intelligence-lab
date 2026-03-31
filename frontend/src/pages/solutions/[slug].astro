@@ -1,0 +1,107 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import Layout from '../../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  // Načteme články
+  const intentsPath = path.resolve(process.cwd(), '../data/enriched_intents.json');
+  let intents = [];
+  try {
+    intents = JSON.parse(fs.readFileSync(intentsPath, 'utf-8'));
+  } catch (e) {
+    console.warn("Zatím žádné Intent články.");
+  }
+
+  // Načteme CRM databázi (abychom měli affiliate linky)
+  const crmsPath = path.resolve(process.cwd(), '../data/enriched_crms.json');
+  let crms = [];
+  try {
+    crms = JSON.parse(fs.readFileSync(crmsPath, 'utf-8'));
+  } catch (e) {
+    console.warn("Zatím žádná CRM data.");
+  }
+
+  // Propojíme každý článek s jeho výherním CRM systémem
+  return intents.map((intent) => {
+    const winningCrm = crms.find(c => c.id === intent.recommended_crm_id) || null;
+    return {
+      params: { slug: intent.id },
+      props: { intent, crm: winningCrm },
+    };
+  });
+}
+
+const { intent, crm } = Astro.props;
+
+// Bezpečnostní pojistka, pokud by AI vybrala neexistující CRM
+const affiliateUrl = crm ? crm.affiliate_url : "#";
+const crmName = crm ? crm.name : intent.recommended_crm_id;
+---
+
+<Layout title={`${intent.title} | CRM Intelligence Lab`} description={intent.friction_warning}>
+  <div class="min-h-screen bg-slate-50 font-sans text-slate-900 pb-32 pt-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <main class="lg:col-span-8">
+        
+        <div class="mb-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 text-xs font-mono uppercase tracking-widest mb-4">
+            Architecture Solution Brief
+          </div>
+          <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4 text-slate-900">
+            {intent.title}
+          </h1>
+          <p class="text-lg text-slate-500 font-mono bg-slate-100 p-3 rounded-md border border-slate-200 inline-block">
+            <span class="text-slate-400">Query Target:</span> "{intent.search_query}"
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-10 mb-8 prose prose-slate max-w-none prose-headings:font-black prose-a:text-indigo-600">
+          <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            Deployment Strategy: {crmName}
+          </h2>
+          <div class="text-slate-700 leading-relaxed space-y-4">
+            {intent.technical_solution.split('\n').filter(p => p.trim() !== '').map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-amber-50 rounded-2xl border border-amber-200 p-8 md:p-10 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-amber-400"></div>
+          <h3 class="text-lg font-black text-amber-900 mb-3 flex items-center gap-2 uppercase tracking-wide font-mono text-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            Technical Friction Warning
+          </h3>
+          <p class="text-amber-900/80 leading-relaxed font-medium">
+            {intent.friction_warning}
+          </p>
+        </div>
+
+      </main>
+
+      <aside class="lg:col-span-4 relative">
+        <div class="sticky top-8 bg-slate-950 rounded-2xl p-8 shadow-2xl text-white border border-slate-800">
+          <div class="text-xs font-mono text-emerald-400 mb-2 uppercase tracking-widest">Recommended Stack</div>
+          <h3 class="text-3xl font-black mb-4">{crmName}</h3>
+          
+          <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+            {intent.call_to_action}
+          </p>
+
+          <a href={affiliateUrl} target="_blank" rel="noopener noreferrer" class="block w-full bg-indigo-600 hover:bg-indigo-500 text-white text-center font-bold py-4 px-6 rounded-xl transition-all shadow-lg shadow-indigo-500/30 mb-4">
+            Initialize Free Sandbox
+          </a>
+          
+          <div class="flex items-center justify-center gap-2 text-xs text-slate-500 font-mono">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            No credit card required for sandbox.
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</Layout>

@@ -146,3 +146,47 @@ CORE_CRMS = [
     "affiliate_url": "https://gohighlevel.com/?ref=crmintelligencelab_live"
   }
 ]
+
+
+# --- 5. INTENT SEO (ŘEŠENÍ PROBLÉMŮ A "HOW TO" ČLÁNKY) ---
+
+# Kombinační matice: Akce + Cíl + Odvětví = Unikátní hledaný dotaz (Long-tail keyword)
+INTENT_ACTIONS = [
+    "How to automate", 
+    "Best CRM for", 
+    "How to track", 
+    "Cheapest way to manage"
+]
+
+INTENT_TARGETS = [
+    "cold calling", 
+    "client invoicing", 
+    "sales commissions", 
+    "B2B lead generation",
+    "email follow-ups"
+]
+
+INTENT_CONTEXTS = [
+    "in real estate", 
+    "for B2B SaaS startups", 
+    "for local marketing agencies", 
+    "for manufacturing companies",
+    "for solo founders"
+]
+
+# Prompt pro expertní SEO článek
+PROMPT_INTENT_ARTICLE = """
+User searches on Google: '{search_query}'.
+From my list of core CRMs ({crm_names}), pick the SINGLE best CRM that solves this specific problem with the least technical debt.
+Write a cynical, highly technical 'Solution Brief' (Expert article).
+Output strictly valid JSON:
+{{
+    "id": "{slug}",
+    "search_query": "{search_query}",
+    "recommended_crm_id": "ID of the winning CRM (must be exact ID like 'pipedrive' or 'hubspot')",
+    "title": "Technical SEO Title for this problem (Max 60 chars)",
+    "technical_solution": "3 paragraphs explaining exactly how to implement this in the winning CRM and why other systems fail at it.",
+    "friction_warning": "1 paragraph explaining what is the hardest part of this setup.",
+    "call_to_action": "Short text encouraging to deploy the winning CRM."
+}}
+"""
